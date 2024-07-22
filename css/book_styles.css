@@ -169,6 +169,9 @@ h3 {
     .content {
         max-width: 100%;
     }
+    h1 {
+        padding: 15px;
+    }
     .epigraph {
         left: 20px;
     }
