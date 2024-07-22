@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+span.menu__link {
+    cursor: pointer;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+.content {
+    position: relative;
+    max-width: 1200px;
+    top: 150px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 90px;
+}
+
+/*****************************************/
+
+.day-night__picker {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    border-width: 3px;
+    border-color: #000;
+    border-style: solid;
+    border-radius: 24px;
+    background: #866969cb;
+    width: 60px;
+    height: 35px;
+    transition: all 0.3s ease 0.3s;
+}
+
+.day,
+.night {
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.night {
+    display: none;
+    border-radius: 50%;
+    height: 100%;
+    width: 40%;
+    position: relative;
+    right: 0;
+    transform: translate(22px, 0px);
+}
+
+.day {
+    border-radius: 50%;
+    height: 100%;
+    width: 60%;
+}
+
+._night .day {
+    opacity: 0;
+    display: none;
+    overflow: hidden;
+    width: 40%;
+}
+
+._night .night {
+    transform: translate(0px 0px);
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+._night .header {
+    background: #cf0808;
+}
+
+._night {
+    background: #000;
+    color: #fff;
+}
+
+
+body,
+._night .menu__sub-list {
+    background-color: #00f7ff;
+}
+
+._night .menu__sub-link {
+    color: #000;
+}
+
+
+/*********************************************/
+
+h1 {
+    text-align: center;
+    padding: 35px;
+    color: #fff;
+}
+
+._touch h1 {
+    position: relative;
+    display: flex;
+    z-index: 5;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    padding: 30px;
+}
+
+.epigraph {
+    text-align: left;
+    left: 200px;
+    max-width: 600px;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.abzac {
+    padding-bottom: 15px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.poem {
+    text-align: left;
+    padding-left: 150px;
+    max-width: 500px;
+    padding-bottom: 15px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .content {
+        max-width: 100%;
+    }
+    .epigraph {
+        left: 20px;
+    }
+}
